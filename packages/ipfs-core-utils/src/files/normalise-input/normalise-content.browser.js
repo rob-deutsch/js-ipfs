@@ -1,4 +1,4 @@
-'use strict'
+  'use strict'
 
 const errCode = require('err-code')
 const { Blob } = globalThis
@@ -17,9 +17,14 @@ const {
  * @returns {Promise<Blob>}
  */
 async function toBlob (input) {
-  // Bytes | String
-  if (isBytes(input) || typeof input === 'string' || input instanceof String) {
+  // Bytes
+  if (isBytes(input)) {
     return new Blob([input])
+  }
+
+  // String
+  if (typeof input === 'string' || input instanceof String) {
+    return new Blob([input.toString()])
   }
 
   // Blob | File

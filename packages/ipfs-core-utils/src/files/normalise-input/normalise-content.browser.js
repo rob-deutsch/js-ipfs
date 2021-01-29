@@ -1,7 +1,7 @@
 'use strict'
 
 const errCode = require('err-code')
-const { Blob } = require('ipfs-utils/src/globalthis')
+const { Blob } = globalThis
 const itPeekable = require('it-peekable')
 const browserStreamToIt = require('browser-readablestream-to-it')
 const all = require('it-all')

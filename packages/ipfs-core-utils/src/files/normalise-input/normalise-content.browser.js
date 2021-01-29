@@ -1,4 +1,4 @@
-  'use strict'
+'use strict'
 
 const errCode = require('err-code')
 const { Blob } = globalThis

@@ -1,7 +1,5 @@
 'use strict'
 
-const { Blob } = globalThis
-
 /**
  * @param {any} obj
  * @returns {obj is ArrayBufferView|ArrayBuffer}

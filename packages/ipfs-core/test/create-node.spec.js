@@ -12,7 +12,6 @@ const IPFS = require('../')
 
 // This gets replaced by `create-repo-browser.js` in the browser
 const createTempRepo = require('./utils/create-repo-nodejs.js')
-const { console } = globalThis
 
 describe('create node', function () {
   let tempRepo

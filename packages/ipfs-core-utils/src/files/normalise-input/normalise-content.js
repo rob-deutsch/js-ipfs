@@ -19,8 +19,13 @@ const {
  */
 async function * toAsyncIterable (input) {
   // Bytes | String
-  if (isBytes(input) || typeof input === 'string' || input instanceof String) {
+  if (isBytes(input)) {
     yield toBytes(input)
+    return
+  }
+
+  if (typeof input === 'string' || input instanceof String) {
+    yield toBytes(input.toString())
     return
   }
 
